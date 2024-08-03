@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   title: 'John Lomat | WordPress & WooCommerce Expert',
   description:
     'Expert WordPress developer specializing in custom websites, WooCommerce, Elementor, Divi, ACF, and SEO. Proven track record with 26 websites delivered.',
+  verification: {
+    google: 'O9Fqju7f6cW3gK_PGBAX3w5xL0rvMKqtuwFLeQoPIxY',
+  },
 }
 
 export default function RootLayout({

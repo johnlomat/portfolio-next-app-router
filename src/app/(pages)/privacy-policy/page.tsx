@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | John Lomat',
     description:
       'Read our privacy policy to understand how we handle your data and protect your privacy.',
-    images:
-      'https://res.cloudinary.com/dhaveyc4z/image/upload/v1722674666/portfolio/1722674662539_john-lomat-og-image.png',
+    images: '/images/john-lomat-og-image.png',
   },
 }
 

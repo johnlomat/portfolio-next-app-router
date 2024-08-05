@@ -19,8 +19,7 @@ export const metadata: Metadata = {
     title: 'John Lomat | WordPress & WooCommerce Expert',
     description:
       'Expert WordPress developer specializing in custom websites, WooCommerce, Elementor, Divi, ACF, and SEO. Proven track record with 26 websites delivered.',
-    images:
-      'https://res.cloudinary.com/dhaveyc4z/image/upload/v1722674666/portfolio/1722674662539_john-lomat-og-image.png',
+    images: '/images/john-lomat-og-image.png',
   },
 }
 
@@ -30,7 +29,7 @@ export default function Home() {
       <section className="relative bg-[#969696] bg-none bg-auto bg-no-repeat pt-0 md:pt-12 xl:bg-[#D7D7D7] xl:bg-[url('/images/section-background-1.svg')] xl:bg-[center_right_-20rem] 2xl:bg-right">
         <div className="container flex flex-wrap space-y-6">
           <div className="bg-top-center absolute bottom-0 left-0 flex w-full items-center bg-[url('/images/rectangle-82.svg')] bg-cover bg-no-repeat px-4 py-[15%] md:static md:bottom-auto md:left-auto md:w-1/2 md:bg-none md:p-0">
-            <div className="font-raleway relative flex w-full flex-col pe-12 pt-[5.625rem] md:w-auto md:p-0">
+            <div className="relative flex w-full flex-col pe-12 pt-[5.625rem] font-raleway md:w-auto md:p-0">
               <h1 className="mb-0 text-[1.25rem] font-bold text-white md:mb-4 md:text-[2.5rem] md:text-neutral-900">
                 Hi, I am{' '}
                 <span className="mt-0 block text-[2.1875rem] leading-none md:mt-6 md:text-[5rem]">
@@ -97,7 +96,7 @@ export default function Home() {
           <div className="container flex flex-wrap space-y-6">
             <div className="flex w-full flex-col items-center space-y-20">
               <HeadingTwo title="About me" />
-              <div className="font-open-sans w-full max-w-[46.875rem] space-y-4 text-center text-[1.0625rem]">
+              <div className="w-full max-w-[46.875rem] space-y-4 text-center font-open-sans text-[1.0625rem]">
                 <p>
                   I&apos;m John Lomat, an expert in WordPress and WooCommerce development with over
                   5 years of experience. My skill set includes extensive proficiency with Elementor,

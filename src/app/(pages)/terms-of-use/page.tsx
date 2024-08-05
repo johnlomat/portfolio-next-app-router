@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     title: 'Terms of Use | John Lomat',
     description:
       'Read our Terms of Use to understand the rules and regulations for using our website.',
-    images:
-      'https://res.cloudinary.com/dhaveyc4z/image/upload/v1722674666/portfolio/1722674662539_john-lomat-og-image.png',
+    images: '/images/john-lomat-og-image.png',
   },
 }
 

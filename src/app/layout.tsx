@@ -38,8 +38,7 @@ export const metadata: Metadata = {
     title: 'John Lomat | WordPress & WooCommerce Expert',
     description:
       'Expert WordPress developer specializing in custom websites, WooCommerce, Elementor, Divi, ACF, and SEO. Proven track record with 26 websites delivered.',
-    images:
-      'https://res.cloudinary.com/dhaveyc4z/image/upload/v1722674666/portfolio/1722674662539_john-lomat-og-image.png',
+    images: '/images/john-lomat-og-image.png',
   },
 }
 

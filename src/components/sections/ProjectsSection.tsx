@@ -14,8 +14,8 @@ const ProjectsSection = () => {
           </div>
         </div>
         <div className="flex w-full flex-col flex-wrap md:flex-row">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+          {projects.map((project: any, index: number) => (
+            <ProjectCard key={index} {...project} />
           ))}
         </div>
       </section>

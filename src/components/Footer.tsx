@@ -59,7 +59,7 @@ const Footer = () => {
             className="flex h-[3rem] w-[3rem] items-center justify-center rounded-full hover:bg-white/30"
           >
             <Image
-              src="/images/oj-logo-icon.webp"
+              src="/images/oj-logo-icon.png"
               alt="OnlineJobs PH logo"
               width={30}
               height={33}

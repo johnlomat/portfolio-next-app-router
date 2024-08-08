@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { cn } from '@/lib/utils'
 
 const NavMenu = ({ isMenuOpen, toggleMenu }: { isMenuOpen: boolean; toggleMenu: any }) => {
   const [isClient, setIsClient] = useState(false)
@@ -18,7 +19,10 @@ const NavMenu = ({ isMenuOpen, toggleMenu }: { isMenuOpen: boolean; toggleMenu: 
 
   return (
     <div
-      className={`${isMenuOpen ? 'block' : 'hidden'} absolute right-4 top-4 z-20 w-[90%] max-w-[18.75rem] md:relative md:right-0 md:top-0 md:block md:w-auto md:max-w-full`}
+      className={cn(
+        'absolute right-4 top-4 z-20 hidden w-[90%] max-w-[18.75rem] md:relative md:right-0 md:top-0 md:block md:w-auto md:max-w-full',
+        { block: isMenuOpen },
+      )}
     >
       <button
         onClick={toggleMenu}
@@ -26,7 +30,7 @@ const NavMenu = ({ isMenuOpen, toggleMenu }: { isMenuOpen: boolean; toggleMenu: 
       >
         <FontAwesomeIcon icon={faTimes} className="h-5 w-5" />
       </button>
-      <ul className="font-montserrat flex-col items-center space-x-0 space-y-4 rounded-lg bg-white p-6 shadow-lg md:flex md:flex-row md:space-x-12 md:space-y-0 md:rounded-none md:bg-transparent md:p-0 md:shadow-none 2xl:space-x-20">
+      <ul className="flex-col items-center space-x-0 space-y-4 rounded-lg bg-white p-6 font-montserrat shadow-lg md:flex md:flex-row md:space-x-12 md:space-y-0 md:rounded-none md:bg-transparent md:p-0 md:shadow-none 2xl:space-x-20">
         <li>
           <Link
             href={{ pathname: '/', hash: 'about-me' }}

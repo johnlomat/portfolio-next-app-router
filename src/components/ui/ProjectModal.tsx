@@ -3,6 +3,7 @@ import { Open_Sans, Montserrat } from 'next/font/google'
 import { Button, Modal } from 'flowbite-react'
 import TechStack from '@/components/ui/TechStack'
 import ProjectCardProps from '@/types/ProjectCardProps'
+import { cn } from '@/lib/utils'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -31,24 +32,26 @@ const ProjectModal = ({
       <Modal.Body className={open_sans.className}>
         <div className="space-y-6">
           <div className="w-full">
-            <div className={`${montserrat.className} uppercase text-cyan-700`}>
+            <div className={cn(montserrat.className, 'uppercase text-cyan-700')}>
               Project Overview
             </div>
             <div>{description}</div>
           </div>
           <div className="w-full">
-            <div className={`${montserrat.className} uppercase text-cyan-700`}>Type</div>
+            <div className={cn(montserrat.className, 'uppercase text-cyan-700')}>Type</div>
             <div>{type}</div>
           </div>
           <div className="w-full">
-            <div className={`${montserrat.className} uppercase text-cyan-700`}>Key Features</div>
+            <div className={cn(montserrat.className, 'uppercase text-cyan-700')}>Key Features</div>
             <ul
               dangerouslySetInnerHTML={{ __html: scope_list_html }}
               className="list-disc space-y-1 ps-[1.25rem]"
             />
           </div>
           <div className="w-full">
-            <div className={`${montserrat.className} mb-1 uppercase text-cyan-700`}>Tech Stack</div>
+            <div className={cn(montserrat.className, 'mb-1 uppercase text-cyan-700')}>
+              Tech Stack
+            </div>
             <div className="grid grid-cols-4 flex-wrap gap-6 md:grid-cols-8">
               {tech_stack.map((tech, index) => (
                 <TechStack key={index} {...tech} />
@@ -75,11 +78,14 @@ const ProjectModal = ({
             href={screenshot_link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${montserrat.className} ${
-              demo_link
-                ? 'border border-gray-200 bg-white uppercase text-gray-900 hover:border-gray-300 hover:bg-gray-200'
-                : 'border border-black bg-cyan-700 font-montserrat font-bold uppercase text-white transition ease-in-out hover:bg-cyan-900'
-            }`}
+            className={cn(
+              montserrat.className,
+              'border border-black bg-cyan-700 font-montserrat font-bold uppercase text-white transition ease-in-out hover:bg-cyan-900',
+              {
+                'border border-gray-200 bg-white uppercase text-gray-900 hover:border-gray-300 hover:bg-gray-200':
+                  demo_link,
+              },
+            )}
           >
             Screenshot
           </Button>

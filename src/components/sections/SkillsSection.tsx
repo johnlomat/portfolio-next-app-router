@@ -1,6 +1,7 @@
 import { usingNow, learning, otherSkills } from '@/data/skills'
 import { HeadingTwo } from '@/components/ui/HeadingPreset'
 import SkillItem from '@/components/ui/SkillItem'
+import { SkillProps } from '@/types/SkillProps'
 
 const SkillsSection = () => (
   <section className="py-24 font-montserrat" id="skills">
@@ -13,7 +14,7 @@ const SkillsSection = () => (
             <h3>Using now:</h3>
           </div>
           <div className="flex flex-wrap gap-y-12">
-            {usingNow.map((skill, index) => (
+            {usingNow.map((skill: SkillProps, index: number) => (
               <SkillItem key={index} {...skill} />
             ))}
           </div>
@@ -24,7 +25,7 @@ const SkillsSection = () => (
             <h3>Learning:</h3>
           </div>
           <div className="flex flex-wrap gap-y-12">
-            {learning.map((skill, index) => (
+            {learning.map((skill: SkillProps, index: number) => (
               <SkillItem key={index} {...skill} />
             ))}
           </div>
@@ -35,7 +36,7 @@ const SkillsSection = () => (
             <h3>Other skills:</h3>
           </div>
           <div className="flex flex-wrap gap-y-12">
-            {otherSkills.map((skill, index) => (
+            {otherSkills.map((skill: SkillProps, index: number) => (
               <SkillItem key={index} {...skill} />
             ))}
           </div>

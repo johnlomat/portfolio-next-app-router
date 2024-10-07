@@ -3,6 +3,7 @@
 import ProjectCard from '@/components/ui/ProjectCard'
 import { HeadingTwo } from '@/components/ui/HeadingPreset'
 import { projects } from '@/data/projects'
+import { ProjectProps } from '@/types/ProjectProps'
 
 const ProjectsSection = () => {
   return (
@@ -14,7 +15,7 @@ const ProjectsSection = () => {
           </div>
         </div>
         <div className="flex w-full flex-col flex-wrap md:flex-row">
-          {projects.map((project: any, index: number) => (
+          {projects.map((project: ProjectProps, index: number) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
